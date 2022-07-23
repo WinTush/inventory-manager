@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{% static 'main.css'}" rel="stylesheet">
+
+        {% if title %}
+            <title>Inventory Manager - {{ title }}</title>
+        {% else %}
+            <title>Inventory Manager</title>
+        {% endif %}
+    </head>
+    <body>
+
+        {% block content %}{% endblock %}
+
+    </body>
+</html>
